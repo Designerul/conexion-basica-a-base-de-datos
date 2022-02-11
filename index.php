@@ -35,13 +35,18 @@
                 </tr>
 
                 <?php
-                    $result = mysqli_query($conn, "SELECT * from zodiaco");
-                    while($mostar = mysqli_fetch_array($result)){
+                    $sql = "SELECT * FROM zodiaco";
+                    $stmt = $conn->prepare($sql);
+                    $stmt->execute();
+
+                    $stmt->setFetchMode(PDO::FETCH_ASSOC);
+
+                    foreach ($stmt->fetchAll() as $row){
                 ?>
                 <tr>
-                    <td> <?php echo $mostar['nombre']  ?> </td>
-                    <td> <?php echo $mostar['edad']  ?> </td>
-                    <td> <?php echo $mostar['zodiaco']  ?> </td>
+                    <td> <?php echo $row['nombre']  ?> </td>
+                    <td> <?php echo $row['edad']  ?> </td>
+                    <td> <?php echo $row['zodiaco']  ?> </td>
                 </tr>
                 <?php
                     }

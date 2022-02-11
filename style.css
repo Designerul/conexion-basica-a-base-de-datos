@@ -1,0 +1,36 @@
+h1{
+    font-family: impact;
+}
+
+section{
+    font-family: sans-serif;
+}
+
+.navegador{
+    background-color: 	#afcfd7;
+    padding: 10px;
+    margin: 10px;
+    border: 2px solid black;
+    font-family: sans-serif;
+}
+
+body{
+    text-align: center;
+}
+
+.fondo_index{
+    background-color: #e6dcbf;
+    padding: 15px;
+    margin: 10px;
+    border: 2px solid black;
+}
+
+.fondo_form{
+    justify-content: center;
+    background-color: #e6dcbf;
+    padding: 15px;
+    margin: 10px auto;
+    border: 2px solid black;
+    width: 300px;
+    height: 450px;
+}
